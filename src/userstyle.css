@@ -14,8 +14,8 @@
     --lighter-grey: hsla(0, 0%, 95%, 1);
     --light-grey: hsla(0, 0%, 85%, 1);
     --mid-grey: hsla(0, 0%, 70%, 1);
-    --font-sans: "SF Pro Text";
-    --font-mono: "Fira Code";
+    --font-sans: "SF Pro Text", "Roboto", sans-serif;
+    --font-mono: "Fira Code", monospace;
 
     /* Nord values */
     --nord-highlight: #00AEEF;
