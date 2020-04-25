@@ -27,8 +27,10 @@ input {
     border: 1px solid var(--nord-sidebar) !important;
 }
 
-input:focus {
-    outline: var(--nord-note-list-selected) auto 2px;
+button:focus,
+input:focus,
+select:focus {
+    outline: var(--nord-note-list-selected) auto 2px !important;
 }
 
 /* Sidebars */
