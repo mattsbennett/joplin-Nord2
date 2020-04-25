@@ -11,25 +11,67 @@
 /* Variables ---------------------------------------------------------------- */
 :root {
     /* Nord2 values */
-    --white: hsla(255, 0%, 100%, 1);
+    --lighter-grey: hsla(0, 0%, 95%, 1);
     --light-grey: hsla(0, 0%, 85%, 1);
+    --mid-grey: hsla(0, 0%, 70%, 1);
     --font-sans: "SF Pro Text";
     --font-mono: "Fira Code";
 
     /* Nord values */
     --nord-highlight: #00AEEF;
+    --nord-sidebar-selection: rgb(94, 129, 172);
     --nord-sidebar: rgb(67, 76, 94);
+    --nord-note-list: rgb(46, 52, 64);
     --nord-note-list-selected: rgb(129, 161, 193);
 
     /* Nord derivative values */
+    --nord-sidebar-selection-dark: hsla(213, 32%, 32%, 1);
     --nord-highlight-light: hsla(196, 100%, 67%, 1);
-    --nord-highlight-lighter: hsla(196, 100%, 87%, 1);
+    --nord-sidebar-light: hsla(220, 17%, 40%, 1);
     --nord-note-list-background-light: hsla(220, 16%, 25%, 1);
 }
 
 /* Base Elements ------------------------------------------------------------ */
 body {
     font-family: var(--font-sans) !important;
+    font-weight: 300 !important;
+}
+
+h1 {
+    border-bottom: 1px solid var(--nord-sidebar-light) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+    font-weight: 400 !important;
+}
+
+ul {
+    margin-top: 0 !important;
+}
+
+li {
+    margin-bottom: 0 !important;
+}
+
+pre {
+    background-color: var(--nord-note-list) !important;
+    border-radius: 2px;
+}
+
+blockquote {
+    border-left-color: var(--mid-grey);
+    font-style: italic;
+    opacity: 0.85 !important;
+}
+
+#rendered-md {
+    padding: 3%;
 }
 
 /* Custom checkboxes -------------------------------------------------------- */
@@ -97,6 +139,10 @@ body {
 .md-checkbox .checkbox-label-checked {
     font-style: italic;
     opacity: 0.65 !important;
+}
+
+li.md-checkbox {
+    margin-bottom: 0.4em !important;
 }
 
 /* Inline code -------------------------------------------------------------- */
