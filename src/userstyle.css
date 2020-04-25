@@ -1,0 +1,123 @@
+/*******************************************************************************
+ * Nord2 - A sub-theme of Joplin's Built-in Nord theme.
+ *
+ * Latest Version: https://github.com/mattsbennett/joplin-Nord2
+ * Designed by: Matthew Bennett
+ * Goals: Readability, even, mid-contrast, minimalism.
+ *
+ * userstyle.css: Custom stylesheet for rendered Markdown.
+ ******************************************************************************/
+
+/* Variables ---------------------------------------------------------------- */
+:root {
+    /* Nord2 values */
+    --white: hsla(255, 0%, 100%, 1);
+    --light-grey: hsla(0, 0%, 85%, 1);
+    --font-sans: "SF Pro Text";
+    --font-mono: "Fira Code";
+
+    /* Nord values */
+    --nord-highlight: #00AEEF;
+    --nord-sidebar: rgb(67, 76, 94);
+    --nord-note-list-selected: rgb(129, 161, 193);
+
+    /* Nord derivative values */
+    --nord-highlight-light: hsla(196, 100%, 67%, 1);
+    --nord-highlight-lighter: hsla(196, 100%, 87%, 1);
+    --nord-note-list-background-light: hsla(220, 16%, 25%, 1);
+}
+
+/* Base Elements ------------------------------------------------------------ */
+body {
+    font-family: var(--font-sans) !important;
+}
+
+/* Custom checkboxes -------------------------------------------------------- */
+.checkbox-wrapper input[type="checkbox"] {
+    margin-left: -3.75em !important;
+    opacity: 0 !important;
+}
+
+.checkbox-wrapper label {
+    display: inline-block;
+    padding-left: 25px;
+    position: relative;
+}
+
+.checkbox-wrapper label::before,
+.checkbox-wrapper label::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+}
+
+/* The fake checkbox */
+.checkbox-wrapper label::before{
+    background-color: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    height: 16px;
+    left: 0px;
+    top: 3px;
+    width: 16px;
+}
+
+.checkbox-wrapper label:hover::before {
+    opacity: 0.8;
+    transition: opacity 0.15s ease-in;
+}
+
+/* Checkmark of the fake checkbox */
+.checkbox-wrapper label::after {
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    color: var(--nord-sidebar);
+    height: 5px;
+    left: 4px;
+    top: 7px;
+    transform: rotate(-45deg);
+    width: 9px;
+}
+
+/* Hide the checkmark by default */
+.checkbox-wrapper input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/* Unhide on the checked state */
+.checkbox-wrapper input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/* Add focus styles on the outer-box of the fake checkbox*/
+.checkbox-wrapper input[type="checkbox"]:focus + label::before {
+    outline: var(--nord-highlight-light) auto 2px;
+}
+
+/* Checked checkbox label styles */
+.md-checkbox .checkbox-label-checked {
+    font-style: italic;
+    opacity: 0.65 !important;
+}
+
+/* Inline code -------------------------------------------------------------- */
+.inline-code {
+    border-radius: 2px !important;
+    border: none !important;
+    color: var(--nord-highlight-light);
+    padding: .25em .5em !important;
+}
+
+/* Code blocks -------------------------------------------------------------- */
+pre {
+    font-family: var(--font-mono) !important;
+}
+
+a {
+    color: var(--nord-highlight-light);
+}
+
+/* Resource icons (pdf etc) ------------------------------------------------- */
+.resource-icon {
+    background-color: var(--nord-highlight-light) !important;
+    top: .35em !important;
+}
