@@ -8,8 +8,6 @@ A sub-theme of [Joplin](https://joplinapp.org/)'s built-in `Nord` theme.
 
 ## Setup
 
----
-
 `Nord2` is a sub-theme intended for use alongside the `Nord` theme built into Joplin.
 
 ### 1. Install fonts (optional)
