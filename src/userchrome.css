@@ -1,22 +1,33 @@
-/**
+/*******************************************************************************
  * Nord2 - A sub-theme of Joplin's Built-in Nord theme.
- *
- * Goals: Readability, even, mid-contrast, minimalism.
  *
  * Latest Version: https://github.com/mattsbennett/joplin-Nord2
  * Designed by: Matthew Bennett
- */
+ * Goals: Readability, even, mid-contrast, minimalism.
+ *
+ * userchrome.css: Custom stylesheet for Joplin-wide app styles.
+ ******************************************************************************/
 
-/* Variables */
+/* Variables ---------------------------------------------------------------- */
 :root {
+    /* Nord2 values */
+    --white: hsla(255, 0%, 100%, 1);
     --light-grey: hsla(0, 0%, 85%, 1);
+    --font-sans: "SF Pro Text";
+    --font-mono: "Fira Code";
+
+    /* Nord values */
+    --nord-highlight: #00AEEF;
     --nord-sidebar: rgb(67, 76, 94);
     --nord-note-list-selected: rgb(129, 161, 193);
+
+    /* Nord derivative values */
+    --nord-highlight-light: hsla(196, 100%, 67%, 1);
+    --nord-highlight-lighter: hsla(196, 100%, 87%, 1);
     --nord-note-list-background-light: hsla(220, 16%, 25%, 1);
-    --font-sans: "SF Pro Text";
 }
 
-/* Base Elements */
+/* Base Elements ------------------------------------------------------------ */
 body,
 a,
 span {
@@ -33,12 +44,16 @@ select:focus {
     outline: var(--nord-note-list-selected) auto 2px !important;
 }
 
-/* Sidebars */
+/* Sidebars ----------------------------------------------------------------- */
 div,
 .side-bar,
 .side-bar div,
 .side-bar div a {
     color: var(--light-grey) !important;
+}
+
+.note-list .list-item-container > div {
+    height: 48px !important;
 }
 
 .note-list .list-item-container {
@@ -50,7 +65,7 @@ div,
     border: 0 !important;
 }
 
-/* Main Header */
+/* Main Header -------------------------------------------------------------- */
 .header a,
 .header .button,
 .header .button .fa,
@@ -58,7 +73,7 @@ div,
     color: var(--light-grey) !important;
 }
 
-/* Note Header */
+/* Note Header -------------------------------------------------------------- */
 .editor-toolbar,
 .tag-list {
     border-bottom: 1px solid var(--nord-sidebar) !important;
@@ -67,4 +82,10 @@ div,
 .tag-list span {
     border-radius: 2px !important;
     color: var(--light-grey) !important;
+}
+
+/* Markdown ----------------------------------------------------------------- */
+.ace_editor div,
+.ace_editor span {
+    font-family: var(--font-mono) !important;
 }
