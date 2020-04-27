@@ -111,14 +111,9 @@ div {
     color: var(--lighter-grey) !important;
 }
 
-.note-editor,
-.noteTextViewer {
-    height: 100% !important;
-}
-
 /* Markdown ----------------------------------------------------------------- */
-.ace_content {
-    margin-top: 10px !important;
+.ace_editor {
+    margin-top: 5px !important;
 }
 
 .ace_editor div,
