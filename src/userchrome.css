@@ -34,7 +34,7 @@
 /* Base Elements ------------------------------------------------------------ */
 body,
 a,
-span {
+span:not(::before) {
     font-family: var(--font-sans) !important;
 }
 
@@ -69,12 +69,11 @@ div {
     color: var(--lighter-grey) !important;
 }
 
-.note-list .list-item-container > div {
-    height: 48px !important;
+.note-list .list-item-container::before {
+    border-bottom: 1px solid var(--nord-note-list-background-light) !important;
 }
 
 .note-list .list-item-container {
-    border-bottom: 1px solid var(--nord-note-list-background-light) !important;
     height: 48px !important;
 }
 
