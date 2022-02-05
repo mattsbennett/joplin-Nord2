@@ -38,6 +38,10 @@ span:not(::before) {
     font-family: var(--font-sans) !important;
 }
 
+button {
+    font-size: 13px;
+}
+
 input {
     border: 1px solid var(--nord-sidebar-light) !important;
 }
