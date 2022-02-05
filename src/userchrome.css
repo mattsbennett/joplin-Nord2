@@ -131,3 +131,12 @@ div {
 .ace-chaos .ace_comment {
     color: var(--mid-grey) !important;
 }
+
+/* Plugins ------------------------------------------------------------------ */
+
+/*
+ * Uncomment if you use tabs plugin horizontally
+ * #plugin-view-joplin\.plugin\.note\.tabs-note\.tabs\.panel {
+ *    border-bottom: 0 !important;
+ * }
+ */
